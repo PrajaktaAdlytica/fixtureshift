@@ -1,0 +1,117 @@
+{
+  "simulationLabel": "DEMO · SIMULATED DATA",
+  "schemaVersion": "1.0-example",
+  "competition": "Greyhaven Interregional League, Spring 2027",
+  "timezone": "Europe/London",
+  "records": [
+    {
+      "simulationLabel": "DEMO · SIMULATED DATA",
+      "caseId": "FS-027",
+      "fixtureId": "F-107",
+      "fixtureName": "Riverside Derby",
+      "originalFixture": {
+        "kickoff": "2027-04-17T15:00:00+01:00",
+        "venue": "Riverside Ground",
+        "teams": ["Calder Borough", "Westmere Athletic"],
+        "status": "Venue unavailable"
+      },
+      "options": [
+        {
+          "id": "A",
+          "kickoff": "2027-04-18T15:00:00+01:00",
+          "venue": "Calder Annex · Pitch 2",
+          "hardChecks": "Pass on supplied records",
+          "affectedFixtureIds": [],
+          "illustrativeRiskRank": 1,
+          "riskExplanation": "Confirmed slot with no additional fixture moves.",
+          "sourceIds": ["FS-SRC-102", "FS-SRC-103", "FS-SRC-104", "FS-SRC-106", "FS-SRC-107"]
+        },
+        {
+          "id": "B",
+          "kickoff": "2027-04-17T18:00:00+01:00",
+          "venue": "West Foundry Hall · Surface A",
+          "hardChecks": "Pass on supplied records after proposed downstream moves",
+          "affectedFixtureIds": ["F-208", "F-312", "F-411"],
+          "illustrativeRiskRank": 2,
+          "riskExplanation": "An uncommitted warm-up request could cause a second venue conflict if confirmed.",
+          "sourceIds": ["FS-SRC-102", "FS-SRC-103", "FS-SRC-104", "FS-SRC-105", "FS-SRC-106", "FS-SRC-107"]
+        }
+      ],
+      "selectedOptionId": "A",
+      "sourceReferences": [
+        {"id": "FS-SRC-101", "title": "Riverside closure", "date": "2027-04-16T08:20:00+01:00", "version": "v1"},
+        {"id": "FS-SRC-102", "title": "Published fixtures", "date": "2027-04-15", "version": "v18"},
+        {"id": "FS-SRC-103", "title": "Regional venue bookings", "date": "2027-04-16T08:45:00+01:00", "version": "v7"},
+        {"id": "FS-SRC-104", "title": "Competition rules", "date": "2027-04-01", "version": "v3.2"},
+        {"id": "FS-SRC-105", "title": "Facility event request", "date": "2027-04-16T08:55:00+01:00", "version": "v1"},
+        {"id": "FS-SRC-106", "title": "Prior changes and booking history", "date": "2027-04-15", "version": "v4"},
+        {"id": "FS-SRC-107", "title": "Team calendars and travel", "date": "2027-04-16T09:05:00+01:00", "version": "v2"}
+      ],
+      "proposedFinding": "Option A is feasible on these records and has lower illustrative follow-on risk.",
+      "unresolvedGap": null,
+      "assignedReviewer": {"fictionalName": "Mara Venn", "role": "Competition Review Lead"},
+      "reviewedDecision": {
+        "state": "Approved in demo",
+        "at": "2027-04-16T10:12:00+01:00",
+        "reason": "Confirmed Sunday slot. Rest and travel reviewed for both teams. No additional fixtures move."
+      },
+      "decisionHistory": [
+        {"state": "Closure recorded", "at": "2027-04-16T08:20:00+01:00", "actorRole": "Venue operator"},
+        {"state": "Affected teams reviewed", "at": "2027-04-16T10:10:00+01:00", "actorRole": "Competition Review Lead"},
+        {"state": "Sunday option approved in demo", "at": "2027-04-16T10:12:00+01:00", "actorRole": "Competition Review Lead"}
+      ],
+      "notice": {
+        "simulationLabel": "DEMO · SIMULATED DATA",
+        "intendedRecipients": ["Calder Borough", "Westmere Athletic"],
+        "status": "Local preview only",
+        "text": "The Riverside Derby will begin at 15:00 BST on Sunday 18 April at Calder Annex, Pitch 2. The original Saturday fixture at Riverside Ground has been withdrawn. DEMO · SIMULATED DATA."
+      },
+      "publicationStatus": "No live publication",
+      "exportStatus": "Approved sample record"
+    },
+    {
+      "simulationLabel": "DEMO · SIMULATED DATA",
+      "caseId": "FS-031",
+      "fixtureId": "F-131",
+      "fixtureName": "East Stand booking",
+      "originalFixture": {
+        "teams": ["Eastgate Rovers", "Marsh Vale"],
+        "status": "Replacement venue confirmation pending"
+      },
+      "options": [
+        {
+          "id": "A",
+          "kickoff": "2027-04-20T19:00:00+01:00",
+          "venue": "Broker’s Field",
+          "hardChecks": "Incomplete · venue availability unverified",
+          "affectedFixtureIds": null,
+          "illustrativeRiskRank": null,
+          "sourceIds": ["FS-SRC-201"]
+        }
+      ],
+      "selectedOptionId": null,
+      "sourceReferences": [
+        {"id": "FS-SRC-201", "title": "Broker’s Field booking extract", "date": "2027-04-16T09:10:00+01:00", "version": "v1"}
+      ],
+      "proposedFinding": "Venue availability is unverified.",
+      "unresolvedGap": {
+        "description": "Written confirmation for the replacement venue is missing.",
+        "ownerRole": "League scheduling coordinator",
+        "nextAction": "Obtain written confirmation from the venue operator."
+      },
+      "assignedReviewer": {"fictionalName": "Mara Venn", "role": "Competition Review Lead"},
+      "reviewedDecision": {
+        "state": "Left open · awaiting venue confirmation",
+        "at": "2027-04-16T10:26:00+01:00",
+        "reason": "The booking extract requires venue confirmation, and no acknowledgement is attached."
+      },
+      "decisionHistory": [
+        {"state": "Booking extract attached", "at": "2027-04-16T09:10:00+01:00", "actorRole": "Fixture planner"},
+        {"state": "Left open", "at": "2027-04-16T10:26:00+01:00", "actorRole": "Competition Review Lead"}
+      ],
+      "notice": null,
+      "publicationStatus": "Blocked pending evidence",
+      "exportStatus": "Unresolved sample record"
+    }
+  ]
+}

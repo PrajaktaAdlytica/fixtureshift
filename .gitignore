@@ -1,0 +1,9 @@
+/node_modules/
+/dist/
+/.vercel/
+/qa/
+/design-qa.md
+.env*
+!.env.example
+.DS_Store
+*.log
